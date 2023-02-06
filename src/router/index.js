@@ -6,8 +6,16 @@ const routes = [
     component: () => import("../pages/MenuPage.vue")
   },
   {
-    path: "/exotest",
-    component: () => import("../pages/exos/ExoTest.vue")
+    path: "/exercice-query-1",
+    component: () => import("../pages/exos/Exo-query-1.vue")
+  },
+  {
+    path: "/exercice-query-2",
+    component: () => import("../pages/exos/Exo-query-2.vue")
+  },
+  {
+    path: "/exercice-query-3",
+    component: () => import("../pages/exos/Exo-query-3.vue")
   },
   {
     path: "/exercice-css-1",

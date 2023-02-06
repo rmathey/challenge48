@@ -1,7 +1,15 @@
 [
     {
-        "titre": "Exercice test",
-        "url": "/exotest"
+        "titre": "Exercice query : niveau facile",
+        "url": "/exercice-query-1?user=utilisateur"
+    },
+    {
+        "titre": "Exercice query : niveau intermédiaire",
+        "url": "/exercice-query-2?user=utilisateur&password=password"
+    },
+    {
+        "titre": "Exercice query : niveau avancé",
+        "url": "/exercice-query-3"
     },
     {
         "titre": "Exercice CSS : niveau facile",
