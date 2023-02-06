@@ -1,6 +1,6 @@
 <template>
     <li>
-        <h2><a :href="element.url">{{ element.titre }}</a></h2>
+        <h2><a :href="element.url">{{ element.titre }}</a> ⬛ ou ☑️</h2>
     </li>
 </template>
 
