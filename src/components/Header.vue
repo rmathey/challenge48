@@ -12,10 +12,28 @@
   </head>
 
   <div class="bg-gray-100 font-sans leading-normal tracking-normal">
-    <div class="w-full m-0 p-0 bg-cover bg-bottom" style="background-image:url('https://wallpaperaccess.com/full/1803545.jpg'); height: 50vh; max-height:200px;">
+    <div class="w-full m-0 p-0 bg-cover bg-bottom" style="background-image:url('https://wallpaperaccess.com/full/1803545.jpg'); height: 50vh; max-height:250px;">
       <div class="container max-w-4xl mx-auto pt-16 md:pt-32 text-center break-normal">
         <p class="text-white font-extrabold text-3xl md:text-5xl"></p>
         <p class="text-xl md:text-2xl text-gray-200 font-bold">Groupe 3 - Challenge 48H</p>
+      </div>
+      <div class="container">
+      <span class="timer">
+        <h1 style="color: white;">Temps Restant :</h1>
+        <h1 id="timer" style="color: white; margin-left: 10px;"></h1>
+      </span>
+      </div>
+      <div class="container">
+      <span class="counter">
+        <p style="color: white;">Challenges réussi : </p>
+        <p id="counterDisplay" style="color: white; margin-left: 5px; font-weight: bold;">0</p>
+      </span>
+      </div>
+      <div class="container">
+      <span>
+        <button id="resetTimer">Reset le timer</button>
+        <button style="margin-bottom: 10px; margin-left: 5px;" @click="resetCounter">Remettre à zéro le compteur</button>
+      </span>
       </div>
     </div>
   </div>
@@ -65,17 +83,6 @@ window.onload = function () {
 
 </script>
 <style>
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  flex-direction: column;
-  background-color: rgb(36, 178, 164);
-  border-radius: 30px;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-}
-
 .container {
   display: flex;
   justify-content: center;
