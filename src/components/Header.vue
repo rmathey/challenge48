@@ -1,8 +1,18 @@
 <template>
   <header>
-    <div>
-      <p id="timer"></p>
-      <p id="counterDisplay">0</p>
+    <div class="container">
+      <span class="timer">
+        <h1>Temps Restant :</h1>
+        <h1 id="timer" style="margin-left: 10px;"></h1>
+      </span>
+    </div>
+    <div class="container">
+      <span class="counter">
+        <p>Challenges réussi : </p>
+        <p id="counterDisplay" style="margin-left: 5px; font-weight: bold;">0</p>
+      </span>
+    </div>
+    <div class="container">
       <span>
         <button id="resetTimer">Reset le timer</button>
         <button @click="resetCounter">Remettre à zéro le compteur</button>
@@ -10,7 +20,6 @@
     </div>
   </header>
 </template>
-
 <script>
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
@@ -55,7 +64,31 @@ window.onload = function () {
 };
 
 </script>
-
 <style>
-/* header styles go here */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 </style>
