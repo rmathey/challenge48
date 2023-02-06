@@ -1,4 +1,6 @@
 <template>
+    <h1><a href="/">Retour</a></h1>
+    <h1>Exercice query 1 : niveau facile</h1>
     <div v-if="this.$route.query.user !== 'admin'">
         <h1><a href="/">Retour</a></h1>
         <h3>Énoncé:</h3>

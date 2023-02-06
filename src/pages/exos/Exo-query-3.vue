@@ -1,5 +1,6 @@
 <template>
     <h1><a href="/">Retour</a></h1>
+    <h1>Exercice query 3 : niveau avancé</h1>
 
     <div v-if="this.$route.query.isAdmin != 'true'">
         <h3>Énoncé:</h3>
