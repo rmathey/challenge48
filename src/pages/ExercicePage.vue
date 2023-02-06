@@ -1,6 +1,7 @@
 <template>
+        <h1><a href="/">Retour</a></h1>
         <h2 v-if="!loadedExo">Cet exercice n'existe pas</h2>
-        <h1>{{ exoId }}</h1>
+        <h2 v-if="loadedExo">{{ exoId }}</h2>
 </template>
 
 <script>

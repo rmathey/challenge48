@@ -1,8 +1,5 @@
 import { createStore } from 'vuex';
 
-const exerciceList = [
-    "1","2","3"
-]
 const store = createStore({
     mutations: {
     },
