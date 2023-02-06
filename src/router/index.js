@@ -6,12 +6,8 @@ const routes = [
     component: () => import("../pages/MenuPage.vue")
   },
   {
-    path: "/:id",
-    component: () => import("../pages/ExercicePage.vue")
-  },
-  {
-    path: "/test",
-    component: () => import("../pages/MenuPage.vue")
+    path: "/exotest",
+    component: () => import("../pages/exos/ExoTest.vue")
   }
 ]
 
