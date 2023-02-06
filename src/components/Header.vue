@@ -2,20 +2,20 @@
   <header>
     <div class="container">
       <span class="timer">
-        <h1>Temps Restant :</h1>
-        <h1 id="timer" style="margin-left: 10px;"></h1>
+        <h1 style="color: white;">Temps Restant :</h1>
+        <h1 id="timer" style="color: white; margin-left: 10px;"></h1>
       </span>
     </div>
     <div class="container">
       <span class="counter">
-        <p>Challenges réussi : </p>
-        <p id="counterDisplay" style="margin-left: 5px; font-weight: bold;">0</p>
+        <p style="color: white;">Challenges réussi : </p>
+        <p id="counterDisplay" style="color: white; margin-left: 5px; font-weight: bold;">0</p>
       </span>
     </div>
     <div class="container">
       <span>
         <button id="resetTimer">Reset le timer</button>
-        <button @click="resetCounter">Remettre à zéro le compteur</button>
+        <button style="margin-bottom: 10px; margin-left: 5px;" @click="resetCounter">Remettre à zéro le compteur</button>
       </span>
     </div>
   </header>
@@ -71,6 +71,9 @@ header {
   align-items: center;
   height: 100%;
   flex-direction: column;
+  background-color: rgb(36, 178, 164);
+  border-radius: 30px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .container {
