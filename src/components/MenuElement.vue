@@ -1,7 +1,7 @@
 <template>
-    <div :router-link="element.url">
-        <h1>{{ element.titre }}</h1>
-    </div>
+    <li>
+        <a :href="element.url">{{ element.titre }}</a>
+    </li>
 </template>
 
 <script>

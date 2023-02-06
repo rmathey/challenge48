@@ -1,5 +1,8 @@
 import { createStore } from 'vuex';
 
+const exerciceList = [
+    "1","2","3"
+]
 const store = createStore({
     mutations: {
     },
@@ -11,7 +14,9 @@ const store = createStore({
         },
         exercice() {
             return (exoId) => {
-                return 'Nom exo' + exoId;
+                console.log(exoId)
+                console.log(exerciceList.includes(exoId))
+                return exerciceList.includes(exoId);
             };
         },
     }

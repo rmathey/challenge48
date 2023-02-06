@@ -1,5 +1,5 @@
 <template>
-        <h2 v-if="!loadedExo">Cette pizza n'existe pas dans notre application</h2>
+        <h2 v-if="!loadedExo">Cet exercice n'existe pas</h2>
         <h1>{{ exoId }}</h1>
 </template>
 

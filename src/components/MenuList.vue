@@ -1,5 +1,5 @@
 <template>
-    <ul id="example-1">
+    <ul>
         <menu-element v-for="element in menu" :key="element.titre" :element="element"></menu-element>
     </ul>
 </template>
