@@ -1,6 +1,30 @@
 [
     {
-        "titre": "Exercice 1",
-        "url": "/1"
+        "titre": "Exercice test",
+        "url": "/exotest"
+    },
+    {
+        "titre": "Exercice CSS : niveau facile",
+        "url": "/exercice-css-1"
+    },
+    {
+        "titre": "Exercice CSS : niveau intermédiaire",
+        "url": "/exercice-css-2"
+    },
+    {
+        "titre": "Exercice CSS : niveau avancé",
+        "url": "/exercice-css-3"
+    },
+    {
+        "titre": "Exercice sécurité : niveau facile",
+        "url": "/exercice-securite-1"
+    },
+    {
+        "titre": "Exercice sécurité : niveau intermédiaire",
+        "url": "/exercice-securite-2"
+    },
+    {
+        "titre": "Exercice sécurité : niveau avancé",
+        "url": "/exercice-securite-3"
     }
 ]
