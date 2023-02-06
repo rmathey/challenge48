@@ -1,6 +1,7 @@
 <template>
     <h1><a href="/">Retour</a></h1>
-    
+    <h1>Exercice query 2 : niveau intermédiaire</h1>
+
     <div v-if="this.$route.query.user != 'admin' && this.$route.query.password != 'admin'">
         <h3>Énoncé:</h3>
         <p>
