@@ -52,7 +52,12 @@ export default {
       document.getElementById("counterDisplay").innerHTML = counter;
       localStorage.setItem("counterValue", counter);
     }
-  }
+  },
+  data() {
+        return {
+            query1: false
+        }
+    }
 };
 
 let duration = 0;
