@@ -37,6 +37,9 @@
         <button id="resetTimer" @click="resetCounter" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
           Remettre le compteur à zéro
         </button>
+        <button id="clearProgression" @click="clearProgression" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
+          Remettre la progression à 0
+        </button>
       </span>
       </div>
     </div>
@@ -51,6 +54,10 @@ export default {
       counter = 0;
       document.getElementById("counterDisplay").innerHTML = counter;
       localStorage.setItem("counterValue", counter);
+    },
+    clearProgression() {
+      localStorage.clear();
+      location.reload()
     }
   },
   data() {
@@ -118,4 +125,5 @@ window.onload = function () {
   justify-content: center;
   align-items: center;
 }
+
 </style>
