@@ -12,15 +12,14 @@
   </head>
 
   <div class="bg-gray-100 font-sans leading-normal tracking-normal">
-    <div class="w-full m-0 p-0 bg-cover bg-bottom" style="background-image:url('https://wallpaperaccess.com/full/1803545.jpg'); height: 50vh; max-height:250px;">
-      <div class="container max-w-4xl mx-auto pt-16 md:pt-32 text-center break-normal">
-        <p class="text-white font-extrabold text-3xl md:text-5xl"></p>
+    <div class="w-full m-0 p-0 bg-cover bg-bottom" style="background-image:url('https://wallpaperaccess.com/full/1803545.jpg'); height: 26vh; max-height:250px;">
+      <div class="container max-w-4xl mx-auto pt-1 text-center break-normal">
         <p class="text-xl md:text-2xl text-gray-200 font-bold">Groupe 3 - Challenge 48H</p>
       </div>
       <div class="container">
       <span class="timer">
-        <h1 style="color: white;">Temps Restant :</h1>
-        <h1 id="timer" style="color: white; margin-left: 10px;"></h1>
+        <h1 style="color: white;">Temps écoulé :</h1>
+        <h1 id="timer" style="color: white; margin-left: 10px; font-weight: bold;"></h1>
       </span>
       </div>
       <div class="container">
@@ -29,10 +28,15 @@
         <p id="counterDisplay" style="color: white; margin-left: 5px; font-weight: bold;">0</p>
       </span>
       </div>
+      <br>
       <div class="container">
       <span>
-        <button id="resetTimer">Reset le timer</button>
-        <button style="margin-bottom: 10px; margin-left: 5px;" @click="resetCounter">Remettre à zéro le compteur</button>
+        <button id="resetTimer" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
+          Redémarrer le timer
+        </button>
+        <button id="resetTimer" @click="resetCounter" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
+          Remettre le compteur à zéro
+        </button>
       </span>
       </div>
     </div>
@@ -51,7 +55,7 @@ export default {
   }
 };
 
-let duration = 1800;
+let duration = 0;
 let counter = 0;
 let intervalId;
 
@@ -63,7 +67,7 @@ function startTimer(duration, display) {
     minutes = minutes < 10 ? "0" + minutes : minutes;
     seconds = seconds < 10 ? "0" + seconds : seconds;
     display.textContent = minutes + ":" + seconds;
-    if (--timer < 0) {
+    if (++timer === 1800) {
       clearInterval(intervalId);
     }
   }, 1000);
@@ -71,13 +75,21 @@ function startTimer(duration, display) {
 
 window.onload = function () {
   let display = document.querySelector('#timer');
-  startTimer(duration, display);
+  let startTime = localStorage.getItem("startTime");
+  if (startTime) {
+    duration = 0 + (Date.now() - startTime) / 1000;
+    startTimer(duration, display);
+  } else {
+    startTimer(duration, display);
+    localStorage.setItem("startTime", Date.now());
+  }
 
   let resetTimerBtn = document.querySelector('#resetTimer');
   resetTimerBtn.addEventListener('click', function () {
     clearInterval(intervalId);
-    duration = 1800;
+    duration = 0;
     startTimer(duration, display);
+    localStorage.setItem("startTime", Date.now());
   });
 };
 
