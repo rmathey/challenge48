@@ -2,7 +2,7 @@
   <div class="m-1">
 
   </div>
-  <div class="w-full m-0 p-0 bg-cover bg-bottom" style="background-image:url('https://cdn.pixabay.com/photo/2015/05/26/23/52/technology-785742_1280.jpg'); height: 100vh; max-height:1000px;">
+  <div class="w-full m-0 p-0 bg-cover bg-bottom" style="background-image:url('https://cdn.pixabay.com/photo/2015/05/26/23/52/technology-785742_1280.jpg'); height: 100vh; max-height:450px;">
     <div class="grid grid-cols-3 gap-2 center">
         <menu-element v-for="element in menu" :key="element.titre" :element="element"></menu-element>
     </div>
