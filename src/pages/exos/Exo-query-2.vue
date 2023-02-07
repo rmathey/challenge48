@@ -27,7 +27,8 @@
 <script>
 export default {
     mounted() {
-        if (this.$route.query.user == 'admin' && this.$route.query.password != 'admin') {
+        if (this.$route.query.user == 'admin' && this.$route.query.password == 'admin') {
+            console.log("REUSSI");
             localStorage.setItem("query2", true);
         }
     }

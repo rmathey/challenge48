@@ -12,6 +12,10 @@ export default {
         menu() {
             return this.$store.getters.menu;
         }
+    },
+    mounted() {
+        //localStorage.clear();
+        console.log(JSON.parse(localStorage.getItem("items")));
     }
 }
 </script>

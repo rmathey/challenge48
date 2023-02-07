@@ -207,8 +207,6 @@ export default {
                 "a",
                 "a"
             ]
-            console.log(responses);
-            console.log(correct_responses);
             this.score = 0;
             for (var i = 0; i < correct_responses.length; i++) {
                 if (responses[i] === correct_responses[i]) {
@@ -221,7 +219,6 @@ export default {
             if (this.score >= 8) {
                 this.succeed = true;
                 localStorage.setItem("securite1", true);
-                console.log(localStorage.getItem("securite1"));
             }
         }
     }

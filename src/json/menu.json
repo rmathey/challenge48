@@ -1,38 +1,47 @@
 [
     {
         "titre": "Exercice CSS : niveau facile",
-        "url": "/exercice-css-1"
+        "url": "/exercice-css-1",
+        "id": "css1"
     },
     {
         "titre": "Exercice CSS : niveau intermédiaire",
-        "url": "/exercice-css-2"
+        "url": "/exercice-css-2",
+        "id": "css2"
     },
     {
         "titre": "Exercice CSS : niveau avancé",
-        "url": "/exercice-css-3"
+        "url": "/exercice-css-3",
+        "id": "css3"
     },
     {
         "titre": "Exercice sécurité : niveau facile",
-        "url": "/exercice-securite-1"
+        "url": "/exercice-securite-1",
+        "id": "securite1"
     },
     {
         "titre": "Exercice sécurité : niveau intermédiaire",
-        "url": "/exercice-securite-2"
+        "url": "/exercice-securite-2",
+        "id": "securite2"
     },
     {
         "titre": "Exercice sécurité : niveau avancé",
-        "url": "/exercice-securite-3"
+        "url": "/exercice-securite-3",
+        "id": "securite3"
     },
     {
         "titre": "Exercice query : niveau facile",
-        "url": "/exercice-query-1?user=utilisateur"
+        "url": "/exercice-query-1?user=utilisateur",
+        "id": "query1"
     },
     {
         "titre": "Exercice query : niveau intermédiaire",
-        "url": "/exercice-query-2?user=utilisateur&password=password"
+        "url": "/exercice-query-2?user=utilisateur&password=password",
+        "id": "query2"
     },
     {
         "titre": "Exercice query : niveau avancé",
-        "url": "/exercice-query-3?user=utilisateur&isAdmin=false"
+        "url": "/exercice-query-3?user=utilisateur&isAdmin=false",
+        "id": "query3"
     }
 ]
