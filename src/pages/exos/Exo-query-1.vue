@@ -17,11 +17,10 @@
 
       </div>
       <div v-else>
-          <p>
+          <p class="mx-11" style="color: greenyellow; font-weight: bold; font-size: larger">
               Bravo, vous avez réussi à accéder au profil de l'admin !
               Vous pouvez désormais accéder aux informations personnelles de l'administrateur du site.
           </p>
-          <h1><a href="/">Retour au sommaire</a></h1>
       </div>
 
       <div class="my-3"></div>
