@@ -26,5 +26,10 @@
 
 <script>
 export default {
+    mounted() {
+        if (this.$route.query.user == 'admin' && this.$route.query.password != 'admin') {
+            localStorage.setItem("query2", true);
+        }
+    }
 };
 </script>

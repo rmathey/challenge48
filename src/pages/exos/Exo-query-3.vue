@@ -19,5 +19,10 @@
 
 <script>
 export default {
+    mounted() {
+        if (this.$route.query.isAdmin === "true") {
+            localStorage.setItem("query3", true);
+        }
+    }
 };
 </script>

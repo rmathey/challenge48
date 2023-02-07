@@ -9,15 +9,30 @@
                 </p>
                 <div>
                     <input type="radio" id="a" value="a" v-model="reponse1">
-                    <label for="a">Protéger les informations confidentielles en ligne.</label>
+                    <label for="a">a. Protéger les informations confidentielles en ligne.</label>
                 </div>
                 <div>
                     <input type="radio" id="b" value="b" v-model="reponse1">
-                    <label for="b">Empêcher les utilisateurs d'accéder à internet.</label>
+                    <label for="b">b. Empêcher les utilisateurs d'accéder à internet.</label>
                 </div>
                 <div>
                     <input type="radio" id="c" value="c" v-model="reponse1">
-                    <label for="c">Augmenter les coûts des services en ligne.</label>
+                    <label for="c">c. Augmenter les coûts des services en ligne.</label>
+                </div>
+            </div>
+
+            <div>
+                <p>
+                    2/Qu'est-ce qu'un mot de passe fort ?
+                </p>
+                <div>
+                    <input type="radio" id="a" value="a" v-model="reponse2">
+                    <label for="a">a. Un mot de passe court et simple, tel que "123456".</label>
+                </div>
+                <div>
+                    <input type="radio" id="b" value="b" v-model="reponse2">
+                    <label for="b">b. Un mot de passe long et complexe, contenant des majuscules, des minuscules, des
+                        chiffres et des symboles.</label>
                 </div>
             </div>
 
@@ -135,6 +150,15 @@
 
         </form>
         <button @click="sendAnswers">Envoyer</button>
+
+        <div v-if="showScore">
+            <p v-if="!succeed">Votre score est de {{ this.score }}/10, vous devez avoir au moins 8/10 pour valider cet
+                exercice</p>
+            <p v-else>Bravo ! Votre score est de {{ this.score }}/10, vous avez validé cet exercice</p>
+        </div>
+        <div v-else>
+            <p></p>
+        </div>
     </div>
 </template>
 
@@ -152,6 +176,9 @@ export default {
             reponse8: '',
             reponse9: '',
             reponse10: '',
+            score: 0,
+            showScore: false,
+            succeed: false
         }
     },
     methods: {
@@ -182,6 +209,20 @@ export default {
             ]
             console.log(responses);
             console.log(correct_responses);
+            this.score = 0;
+            for (var i = 0; i < correct_responses.length; i++) {
+                if (responses[i] === correct_responses[i]) {
+                    this.score += 1;
+                }
+            }
+            if (this.score > 0) {
+                this.showScore = true;
+            }
+            if (this.score >= 8) {
+                this.succeed = true;
+                localStorage.setItem("securite1", true);
+                console.log(localStorage.getItem("securite1"));
+            }
         }
     }
 }

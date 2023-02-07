@@ -48,6 +48,7 @@ export default {
       ]
       if (username_list.includes(this.username.trim()) && username_list.includes(this.password.trim())){
         this.connected = true;
+        localStorage.setItem("securite2", true);
       }
       else {
         this.connected = false;

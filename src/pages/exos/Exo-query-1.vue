@@ -34,6 +34,11 @@ export default {
         return {
             hint: true
         }
+    },
+    mounted() {
+        if (this.$route.query.user == 'admin') {
+            localStorage.setItem("query1", true);
+        }
     }
 };
 </script>
