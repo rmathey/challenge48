@@ -1,4 +1,5 @@
 <template>
+
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,40 +8,41 @@
     <meta name="Groupe 3" content="name">
     <meta name="description" content="description here">
     <meta name="keywords" content="keywords,here">
-    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/> <!--Replace with your tailwind.css once created-->
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <!--Replace with your tailwind.css once created-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" rel="stylesheet">
   </head>
 
   <div class="bg-gray-100 font-sans leading-normal tracking-normal">
-    <div class="w-full m-0 p-0 bg-cover bg-bottom" style="background-image:url('https://wallpaperaccess.com/full/1803545.jpg'); height: 26vh; max-height:250px;">
+    <div class="w-full m-0 p-0 bg-cover bg-bottom"
+      style="background-image:url('https://wallpaperaccess.com/full/1803545.jpg'); height: 26vh; max-height:250px;">
       <div class="container max-w-4xl mx-auto pt-1 text-center break-normal">
         <p class="text-xl md:text-2xl text-gray-200 font-bold">Groupe 3 - Challenge 48H</p>
       </div>
       <div class="container">
-      <span class="timer">
-        <h1 style="color: white;">Temps écoulé :</h1>
-        <h1 id="timer" style="color: white; margin-left: 10px; font-weight: bold;"></h1>
-      </span>
+        <span class="timer">
+          <h1 style="color: white;">Temps écoulé :</h1>
+          <h1 id="timer" style="color: white; margin-left: 10px; font-weight: bold;"></h1>
+        </span>
       </div>
       <div class="container">
-      <span class="counter">
-        <p style="color: white;">Challenges réussi : </p>
-        <p id="counterDisplay" style="color: white; margin-left: 5px; font-weight: bold;">0</p>
-      </span>
+        <span class="counter">
+          <p style="color: white;">Challenges réussi : </p>
+          <p id="counterDisplay" style="color: white; margin-left: 5px; font-weight: bold;">0</p>
+        </span>
       </div>
       <br>
       <div class="container">
-      <span>
-        <button id="resetTimer" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
-          Redémarrer le timer
-        </button>
-        <button id="resetTimer" @click="resetCounter" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
-          Remettre le compteur à zéro
-        </button>
-        <button id="clearProgression" @click="clearProgression" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
-          Remettre la progression à 0
-        </button>
-      </span>
+        <span>
+          <button id="resetTimer"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
+            Redémarrer le timer
+          </button>
+          <button id="resetTimer" @click="resetCounter"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
+            Remettre le compteur à zéro
+          </button>
+        </span>
       </div>
     </div>
   </div>
@@ -54,17 +56,39 @@ export default {
       counter = 0;
       document.getElementById("counterDisplay").innerHTML = counter;
       localStorage.setItem("counterValue", counter);
-    },
-    clearProgression() {
       localStorage.clear();
       location.reload()
+    },
+    changeCounter(num) {
+      document.getElementById("counterDisplay").innerHTML = num;
+      localStorage.setItem("counterValue", counter);
     }
   },
   data() {
-        return {
-            query1: false
-        }
+    return {
+      query1: false
     }
+  },
+  mounted() {
+    var count = 0;
+    const list_exos = [
+      "css1",
+      "css2",
+      "css3",
+      "securite1",
+      "securite2",
+      "securite3",
+      "query1",
+      "query2",
+      "query3"
+    ]
+    for (let i = 0; i < list_exos.length; i++) {
+      if (localStorage.getItem(list_exos[i])) {
+        count += 1
+      }
+    }
+    this.changeCounter(count);
+  }
 };
 
 let duration = 0;
@@ -125,5 +149,4 @@ window.onload = function () {
   justify-content: center;
   align-items: center;
 }
-
 </style>
