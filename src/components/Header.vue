@@ -97,8 +97,8 @@ window.onload = function () {
     localStorage.setItem("startTime", Date.now());
   });
 };
-
 </script>
+
 <style>
 .container {
   display: flex;
