@@ -27,7 +27,7 @@
       </div>
       <div class="container">
         <span class="counter">
-          <p style="color: white;">Challenges réussi : </p>
+          <p style="color: white;">Challenges réussis : </p>
           <p id="counterDisplay" style="color: white; margin-left: 5px; font-weight: bold;">0</p>
         </span>
       </div>
