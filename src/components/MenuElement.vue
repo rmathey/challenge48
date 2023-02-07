@@ -1,8 +1,8 @@
 <template>
     <div>
         <button class="bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 px-4 border border-blue-600 rounded m-1">
-            Remettre le compteur à zéro
-            <h2 class="container"><a :href="element.url">{{ element.titre }}</a>
+            <h2 class="container">
+                <a :href="element.url">{{ element.titre }}</a>
                 <h6 v-if="!valide">⬛</h6>
                 <h6 v-else>☑️</h6>
             </h2>
