@@ -155,7 +155,7 @@
           <div v-if="showScore">
               <p style="font-weight: bold" v-if="!succeed">Votre score est de {{ this.score }}/10, vous devez avoir au moins 8/10 pour valider cet
                   exercice</p>
-              <p style="font-weight: bold" v-else>Bravo ! Votre score est de {{ this.score }}/10, vous avez validé cet exercice</p>
+            <p class="mx-11" style="font-weight: bold; font-size: larger; color: greenyellow" v-else>Bravo ! Votre score est de {{ this.score }}/10, vous avez validé cet exercice</p>
           </div>
           <div v-else>
               <p></p>
